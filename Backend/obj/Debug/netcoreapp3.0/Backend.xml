@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Backend</name>
+    </assembly>
+    <members>
+        <member name="M:Backend.Controllers.CategoriaReceitaController.Get">
+            <summary>
+            Busca todas as categorias de receitas cadastradas 
+            </summary>
+            <returns>Retorna uma lista de categorias de receitas</returns>
+        </member>
+        <member name="M:Backend.Controllers.CategoriaReceitaController.Get(System.Int32)">
+            <summary>
+            Busca uma categoria pelo ID
+            </summary>
+            <returns>Retorna uma categoria válida</returns>
+        </member>
+        <member name="M:Backend.Controllers.CategoriaReceitaController.Post(Backend.Domains.CategoriaReceita)">
+             <summary>
+            Cria uma categoria definida pelo usuário administrador
+             </summary>
+             <returns>Envia para o banco a categoria criada</returns>
+        </member>
+        <member name="M:Backend.Controllers.CategoriaReceitaController.Put(System.Int32,Backend.Domains.CategoriaReceita)">
+             <summary>
+            Altera uma categoria definida pelo usuário administrador
+             </summary>
+             <returns>Envia para o banco a categoria alterada</returns>
+        </member>
+        <member name="M:Backend.Controllers.CategoriaReceitaController.Delete(System.Int32)">
+            <summary>
+            Deleta uma categoria de receitas
+            </summary>
+            <returns>Deleta do banco uma categoria de receita</returns>
+        </member>
+        <member name="M:Backend.Controllers.EnderecoController.Get">
+            <summary>
+            Lista os enderecos cadastrados no banco
+            </summary>
+            <returns>Retorna uma lista de endereços</returns>
+        </member>
+        <member name="M:Backend.Controllers.EnderecoController.Get(System.Int32)">
+            <summary>
+            Consulta um endereço no banco pelo ID
+            </summary>
+            <returns>Retorna um endereço cadastrado</returns>
+        </member>
+        <member name="M:Backend.Controllers.EnderecoController.Post(Backend.Domains.Endereco)">
+            <summary>
+             Cria um novo endereço
+            </summary>
+            <returns>Enviar para o banco o endereço cadastrado</returns>
+        </member>
+        <member name="M:Backend.Controllers.EnderecoController.Put(System.Int32,Backend.Domains.Endereco)">
+            <summary>
+            Altera o endereço solicitado pelo usuário baseado pelo ID
+            </summary>
+            <returns>Altera o endereço no banco </returns>
+        </member>
+        <member name="M:Backend.Controllers.EnderecoController.Delete(System.Int32)">
+            <summary>
+            Deleta um endereço baseado no ID
+            </summary>
+            <returns>Deleta o endereço cadastrado</returns>
+        </member>
+        <member name="M:Backend.Controllers.FiltroController.Get(Backend.ViewModels.FiltroViewModel)">
+            <summary>
+            Filtra as ofertas pelos parâmetros solicitados
+            </summary>
+            <returns>Retorna uma lista de ofertas</returns>
+        </member>
+        <member name="M:Backend.Controllers.ItemPedidoController.Get">
+            <summary>
+            Consulta os Itens dos pedidos
+            </summary>
+            <returns>Retornar uma lista de itens cadastrados</returns>
+        </member>
+        <member name="M:Backend.Controllers.ItemPedidoController.Get(System.Int32)">
+            <summary>
+            Consulta os itens dos pedidos pelo ID
+            </summary>
+            <returns>Retorna o item referenciado pelo id</returns>
+        </member>
+        <member name="M:Backend.Controllers.ItemPedidoController.Post(Backend.Domains.ItemPedido)">
+            <summary>
+            Cria um novo item do pedido
+            </summary>
+            <returns>Envia para o banco os itens cadastrados </returns>
+        </member>
+        <member name="M:Backend.Controllers.ItemPedidoController.Put(System.Int32,Backend.Domains.ItemPedido)">
+            <summary>
+             Altera o item do pedido pelo ID
+            </summary>
+            <returns>Envia para o banco o item alterado</returns>
+        </member>
+        <member name="M:Backend.Controllers.ItemPedidoController.Delete(System.Int32)">
+            <summary>
+            Deleta o item do pedido cadastrado
+            </summary>
+            <returns> Deleta um item cadastrado</returns>
+        </member>
+        <member name="M:Backend.Controllers.LoginController.Login(Backend.ViewModels.LoginViewModel)">
+            <summary>
+            Verifica se usuário está na base de dados e gera o Token de acesso
+            </summary>
+            <returns>Retorna o Token Válido</returns>
+        </member>
+        <member name="M:Backend.Controllers.OfertaController.Get">
+            <summary>
+             Busca uma lista de ofertas cadastradas
+            </summary>
+            <returns>Retorna uma lista de ofertas</returns>
+        </member>
+        <member name="M:Backend.Controllers.OfertaController.Get(System.Int32)">
+            <summary>
+            Consulta uma oferta pelo ID
+            </summary>
+            <returns>Retorna uma oferta válida</returns>
+        </member>
+        <member name="M:Backend.Controllers.OfertaController.Post(Backend.Domains.Oferta)">
+            <summary>
+            Cria uma nova oferta
+            </summary>
+            <returns>Envia para o banco o valor cadastrado</returns>
+        </member>
+        <member name="M:Backend.Controllers.OfertaController.Put(System.Int32,Backend.Domains.Oferta)">
+            <summary>
+            Altera uma oferta cadastrada baseado no ID
+            </summary>
+            <returns>Envia para o banco o valor alterado</returns>
+        </member>
+        <member name="M:Backend.Controllers.OfertaController.Delete(System.Int32)">
+            <summary>
+            Deleta uma oferta
+            </summary>
+            <returns>Deleta uma oferta cadastrada</returns>
+        </member>
+        <member name="M:Backend.Controllers.PedidoController.Get">
+            <summary>
+            Consulta uma lista de pedidos
+            </summary>
+            <returns>Retorna uma lista de pedidos </returns>
+        </member>
+        <member name="M:Backend.Controllers.PedidoController.Get(System.Int32)">
+            <summary>
+            Consulta pedido baseado no ID
+            </summary>
+            <returns>Retorna um pedido </returns>
+        </member>
+        <member name="M:Backend.Controllers.PedidoController.Post(Backend.Domains.Pedido)">
+            <summary>
+            Cadastra um novo pedido
+            </summary>
+            <returns>Cadastra um pedido</returns>
+        </member>
+        <member name="M:Backend.Controllers.PedidoController.Put(System.Int32,Backend.Domains.Pedido)">
+            <summary>
+            Altera um pedido baseado no ID
+            </summary>
+            <returns>Envia para o banco o pedido alterado</returns>
+        </member>
+        <member name="M:Backend.Controllers.PedidoController.Delete(System.Int32)">
+            <summary>
+            Deleta um pedido
+            </summary>
+            <returns>Atualiza o banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.ProdutoController.Get">
+            <summary>
+            Consuta uma lista de produtos cadastrados
+            </summary>
+            <returns>Retorna uma lista de produtos</returns>
+        </member>
+        <member name="M:Backend.Controllers.ProdutoController.Get(System.Int32)">
+            <summary>
+            Consulta produto baseado no ID
+            </summary>
+            <returns>Retorna um produto </returns>
+        </member>
+        <member name="M:Backend.Controllers.ProdutoController.Post(Backend.Domains.Produto)">
+            <summary>
+            Cadastra um novo produto pelo usuário administrador
+            </summary>
+            <returns>Cadastra um novo produto</returns>
+        </member>
+        <member name="M:Backend.Controllers.ProdutoController.Put(System.Int32,Backend.Domains.Produto)">
+            <summary>
+            Altera produto baseado no ID
+            </summary>
+            <returns>Envia alteração do produto no banco </returns>
+        </member>
+        <member name="M:Backend.Controllers.ProdutoController.Delete(System.Int32)">
+            <summary>
+            Deleta produto
+            </summary>
+            <returns>Deleta o produto no banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.ReceitaController.Get">
+            <summary>
+            Consulta uma lista de receita cadastradas
+            </summary>
+            <returns>Retorna uma lista de receitas</returns>
+        </member>
+        <member name="M:Backend.Controllers.ReceitaController.Get(System.Int32)">
+            <summary>
+            Consulta receita baseado no ID
+            </summary>
+            <returns>Retorna uma receita</returns>
+        </member>
+        <member name="M:Backend.Controllers.ReceitaController.GetFiltro(Backend.ViewModels.FiltroViewModel)">
+            <summary>
+            Consulta receita baseado por palavra ou letra
+            </summary>
+            <returns>Retorna a receita encontrada</returns>    
+        </member>
+        <member name="M:Backend.Controllers.ReceitaController.Post(Backend.Domains.Receita)">
+            <summary>
+            Cadastra uma nova receita no banco
+            </summary>
+            <returns>Receita cadastrada</returns>
+        </member>
+        <member name="M:Backend.Controllers.ReceitaController.Put(System.Int32,Backend.Domains.Receita)">
+            <summary>
+            Altera uma receita
+            </summary>
+            <returns>Envia para o banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.ReceitaController.Delete(System.Int32)">
+            <summary>
+            Deleta receita
+            </summary>
+            <returns>Atualiza o banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.TelefoneController.Get">
+            <summary>
+            Consulta os telefones cadastrados
+            </summary>
+            <returns>Retorna um valor valido</returns>
+        </member>
+        <member name="M:Backend.Controllers.TelefoneController.Get(System.Int32)">
+            <summary>
+            Consulta os telefones baseado no ID cadastrasdo
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna um valor valido</returns>
+        </member>
+        <member name="M:Backend.Controllers.TelefoneController.Post(Backend.Domains.Telefone)">
+            <summary>
+            Cadastra um telefone  
+            </summary>
+            <returns>Cadastrar no banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.TelefoneController.Put(System.Int32,Backend.Domains.Telefone)">
+            <summary>
+            Atualiza um telefone
+            </summary>
+            <returns>Atualiza um dado no banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.TelefoneController.Delete(System.Int32)">
+            <summary>
+            Deleta telefone já cadastrado
+            </summary>
+            <returns>Deleta informação do banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.TipoController.Get">
+            <summary>
+            Consulta o tipo do usuário
+            </summary>
+            <returns>Retorna um valor válido</returns>
+        </member>
+        <member name="M:Backend.Controllers.TipoController.Get(System.Int32)">
+            <summary>
+            Consulta um tipo de usuário baseado no ID
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna um tipo tipo de usuário se for válido</returns>
+        </member>
+        <member name="M:Backend.Controllers.TipoController.Post(Backend.Domains.Tipo)">
+            <summary>
+            Cadastra um tipo de usuário 
+            </summary>
+            <returns>Insere no banco um tipo de usuário</returns>
+        </member>
+        <member name="M:Backend.Controllers.TipoController.Put(System.Int32,Backend.Domains.Tipo)">
+            <summary>
+            Atualiza o tipo de usuário que já está cadastrado
+            </summary>
+            <returns>Atualiza no banco o tipo de usuário</returns>
+        </member>
+        <member name="M:Backend.Controllers.TipoController.Delete(System.Int32)">
+            <summary>
+            Deleta o tipo de usuário já cadastrado no banco 
+            </summary>
+            <returns>Atualiza o banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.UsuarioController.Get">
+            <summary>
+            Consulta todos os usuários cadastrados
+            </summary>
+            <returns>Retorna uma lista </returns>
+        </member>
+        <member name="M:Backend.Controllers.UsuarioController.Get(System.Int32)">
+            <summary>
+            Consulta um usuário pelo id
+            </summary>
+            <returns>retorna a informação de um usuário cadastrado</returns>
+        </member>
+        <member name="M:Backend.Controllers.UsuarioController.Post(Backend.Domains.Usuario)">
+            <summary>
+            Cadastra a informação de um usuário
+            </summary>
+            <returns>Cadastra um novo usuário no banco</returns>
+        </member>
+        <member name="M:Backend.Controllers.UsuarioController.Put(System.Int32,Backend.Domains.Usuario)">
+            <summary>
+            Atualiza as informações de um usuário existente
+            </summary>
+            <returns>Atualiza informação cadastrada</returns>
+        </member>
+        <member name="M:Backend.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Deleta um usuário referenciado por id
+            </summary>
+            <returns>Deleta um usuário exitente no banco de dados</returns>
+        </member>
+        <member name="M:Backend.Controllers.VerificaController.ValidaCNPJ(System.String)">
+            <summary>
+             Método que verifica se é válido o cnpf inserido, antes da finalização do cadastro
+            </summary>
+            <param name="cnpj"></param>
+            <returns>Retorna true ou false</returns>        
+        </member>
+        <member name="M:Backend.Controllers.VerificaController.ValidaCPF(System.String)">
+            <summary>
+             Método que verifica se é válido o cpf inserido, antes da finalização do cadastro
+            </summary>
+            <param name="cpfUsuario"></param>
+            <returns>Retorna true ou false  </returns>
+        </member>
+    </members>
+</doc>
